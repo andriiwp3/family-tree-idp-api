@@ -5,6 +5,7 @@ import { envValidationSchema } from './common/validations/env.validation';
 import { TypeOrmConfigService } from './common/configs/type-orm.config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { PersonModule } from './person/person.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { AppService } from './app.service';
       useClass: TypeOrmConfigService,
       inject: [ConfigService],
     }),
+    PersonModule,
   ],
   controllers: [AppController],
   providers: [AppService],

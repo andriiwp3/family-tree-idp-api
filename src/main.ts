@@ -21,7 +21,7 @@ async function bootstrap() {
     .build();
   const document = SwaggerModule.createDocument(app, swaggerOptions);
 
-  SwaggerModule.setup('/api/', app, document);
+  SwaggerModule.setup('/api', app, document);
 
   /**
    * Get port from env variables or use 8080 by default
